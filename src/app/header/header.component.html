@@ -1,0 +1,29 @@
+<header class="bg-blue-500 text-white py-4 fixed top-0 w-full">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <h1 class="text-xl md:text-2xl lg:text-3xl font-bold">Your Website Name</h1>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#" class="hover:text-gray-300">About</a></li>
+          <li><a href="#" class="hover:text-gray-300">Services</a></li>
+          <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="block md:hidden focus:outline-none" (click)="toggleMenu()">
+        <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <nav class="md:hidden mt-4" [ngClass]="{ block: menuOpen, hidden: !menuOpen }">
+      <ul class="flex flex-col space-y-2">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">About</a></li>
+        <li><a href="#" class="hover:text-gray-300">Services</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
